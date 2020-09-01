@@ -12,7 +12,7 @@ function Result({ reduxState }) {
                     <Names>
                         <Name1>{reduxState.name1}</Name1>
                         <Vs>&</Vs>
-                        <Name2>{reduxState.name1}</Name2>
+                        <Name2>{reduxState.name2}</Name2>
                     </Names>
                     <ResultTxt>{reduxState.resultText}</ResultTxt>
                 </NamesContainer>
