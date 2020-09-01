@@ -23,7 +23,7 @@ export const Img = styled.img`
 export const Link = styled.a`
     text-decoration: none;
     position: absolute;
-    left: 10px;
-    bottom: 10px;
+    left: 20px;
+    bottom: 20px;
     cursor: pointer;
 `
