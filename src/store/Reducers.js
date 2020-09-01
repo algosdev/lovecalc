@@ -21,6 +21,8 @@ export default function rootReducer(state = initState, action) {
                 ...state,
                 progress: 1
             }
+        case "RESET":
+            return initState
         default: return state;
     }
 }

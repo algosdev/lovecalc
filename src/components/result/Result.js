@@ -1,26 +1,35 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Container, Img, ImgContainer, Names, NamesContainer, Name1, Name2, Vs, Percentage, ResultTxt } from './ResultStyle';
+import { Container, Button, Img, ImgContainer, Names, NamesContainer, Name, Vs, Percentage, ResultTxt } from './ResultStyle';
 import Heart from '../../heart.png'
-function Result({ reduxState }) {
+import { Reset } from '../../store/Actions'
+function Result(props) {
+    const { reduxState, reset } = props;
+    console.log(props)
     const heartEffect = reduxState.progress === 1 ? 'effect' : 'simple';
+    const ready = reduxState.progress === 2 ? true : false;
     return (
         <Container>
-            {reduxState.progress === 2 ? (
+            {ready ? (
                 <NamesContainer>
                     <Names>
-                        <Name1>{reduxState.name1}</Name1>
+                        <Name>{reduxState.name1}</Name>
                         <Vs>&</Vs>
-                        <Name2>{reduxState.name2}</Name2>
+                        <Name>{reduxState.name2}</Name>
                     </Names>
                     <ResultTxt>{reduxState.resultText}</ResultTxt>
                 </NamesContainer>
             ) : null}
             <ImgContainer>
                 <Img className={reduxState.progress === 0 ? null : heartEffect} src={Heart} alt='' />
-                <Percentage className={reduxState.progress === 0 ? null : heartEffect}>{reduxState.progress === 2 ? `${reduxState.percentage}%` : null}</Percentage>
+                {ready ? (
+                    <Percentage>{reduxState.percentage + "%"}</Percentage>
+                ) : null}
                 <Img className={reduxState.progress === 0 ? null : heartEffect} src={Heart} alt='' />
             </ImgContainer>
+            {ready ? (
+                <Button onClick={() => { reset() }}>Try Again</Button>
+            ) : null}
         </Container>
     )
 }
@@ -30,4 +39,9 @@ const mapStateToProps = (state) => {
         reduxState: state
     }
 }
-export default connect(mapStateToProps)(Result)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        reset: () => { dispatch(Reset()) }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Result)

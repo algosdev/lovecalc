@@ -14,6 +14,11 @@ const Calculating = () => {
         type: "CALCULATING",
     }
 }
+export const Reset = () => {
+    return {
+        type: "RESET",
+    }
+}
 export const fetchData = (name1, name2) => {
     return (dispatch) => {
         dispatch(Calculating());

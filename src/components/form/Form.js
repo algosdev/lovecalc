@@ -7,7 +7,7 @@ const Header = (props) => {
     const [name2, setname2] = useState(null);
     const sendData = (e) => {
         e.preventDefault();
-        if (name1 !== null && name1 !== null) {
+        if (name1 !== null && name2 !== null) {
             props.upload(name1, name2)
         }
         else {

@@ -38,7 +38,7 @@ export const Button = styled.button`
     border: 0;
     color: #FFFFFF;
     cursor: pointer;
-    font-size: 1.4em;
+    font-size: 1.2em;
     letter-spacing: 1px;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
 `

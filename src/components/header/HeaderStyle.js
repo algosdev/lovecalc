@@ -8,7 +8,7 @@ export const Headline = styled.h1`
     font-weight: 600;
     font-size: 4em;
     color: #FFFFFF;
-    margin: 0;
+    margin: 10px 0;
 `
 export const SubHeadline = styled.p`
     font-style: normal;
@@ -16,4 +16,14 @@ export const SubHeadline = styled.p`
     font-size: 1.2em;
     margin: 0;
     color: rgba(255, 255, 255, 0.85);
+`
+export const Img = styled.img`
+        width: 30px;
+`
+export const Link = styled.a`
+    text-decoration: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
 `

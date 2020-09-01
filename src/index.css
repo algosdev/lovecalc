@@ -9,4 +9,11 @@ body {
   position: relative;
   background: linear-gradient(150deg, #FF3636, #CC13D0 );
   height: 100vh;
+  overflow: hidden;
+}
+.App {
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
 }
