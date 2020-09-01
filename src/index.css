@@ -8,7 +8,6 @@ body {
   padding: 0;
   position: relative;
   background: linear-gradient(150deg, #FF3636, #CC13D0 );
-  overflow: hidden;
 }
 .App {
   max-width: 500px;
@@ -16,4 +15,5 @@ body {
   position: relative;
   margin: 0 auto;
   height: 100vh;
+  overflow: hidden;
 }
