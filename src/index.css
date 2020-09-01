@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Mirza:wght@600&display=swap');
-* {
+body * {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  box-sizing: border-box;
 }
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   position: relative;
-  background: linear-gradient(to right, #FF3636, #CC13D0 );
+  background: linear-gradient(150deg, #FF3636, #CC13D0 );
+  height: 100vh;
 }
