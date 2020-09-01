@@ -63,14 +63,12 @@ export const Names = styled.div`
 `
 
 export const Percentage = styled.p`
-    font-size: 3em; 
     position: absolute;
     width: 100%;
     text-align: center;
     top: 20px;
     color: #fff;   
     z-index: 10;
-    animation: ${scaleOne} 1s linear forwards;
 `
 export const Name1 = styled.div`
     font-size: 2em; 
