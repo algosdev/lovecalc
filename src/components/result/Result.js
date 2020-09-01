@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { Container, Img, ImgContainer, Names, NamesContainer, Name1, Name2, Vs, Percentage, ResultTxt } from './ResultStyle';
 import Heart from '../../heart.png'
