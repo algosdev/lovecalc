@@ -24,6 +24,6 @@ export const Link = styled.a`
     text-decoration: none;
     position: absolute;
     left: 10px;
-    top: 10px;
+    bottom: 10px;
     cursor: pointer;
 `
