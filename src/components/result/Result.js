@@ -19,7 +19,7 @@ function Result({ reduxState }) {
             ) : null}
             <ImgContainer>
                 <Img className={reduxState.progress === 0 ? null : heartEffect} src={Heart} alt='' />
-                <Percentage className={reduxState.progress === 0 ? null : heartEffect}>{reduxState.percentage + "%" || null}</Percentage>
+                <Percentage className={reduxState.progress === 0 ? null : heartEffect}>{reduxState.progress === 2 ? `${reduxState.percentage}%` : null}</Percentage>
                 <Img className={reduxState.progress === 0 ? null : heartEffect} src={Heart} alt='' />
             </ImgContainer>
         </Container>
