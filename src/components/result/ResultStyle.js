@@ -89,7 +89,8 @@ export const ResultTxt = styled.div`
     font-size: 1.3em;
     color: #fff;
     margin: 10 auto;
+    animation: ${scaleOne} 1s linear forwards;
 `
-export const NamesContainer = styled.p`
+export const NamesContainer = styled.div`
     text-align: center
 `

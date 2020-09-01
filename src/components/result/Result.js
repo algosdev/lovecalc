@@ -4,7 +4,6 @@ import { Container, Img, ImgContainer, Names, NamesContainer, Name1, Name2, Vs, 
 import Heart from '../../heart.png'
 function Result({ reduxState }) {
     const heartEffect = reduxState.progress === 1 ? 'effect' : 'simple';
-    console.log(reduxState)
     return (
         <Container>
             {reduxState.progress === 2 ? (
