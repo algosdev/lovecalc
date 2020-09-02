@@ -1,3 +1,7 @@
+import { combineReducers } from 'redux';
+import { firestoreReducer } from 'redux-firestore';
+import { firebaseReducer } from 'react-redux-firebase';
+
 const initState = {
     name1: null,
     name2: null,
@@ -6,7 +10,7 @@ const initState = {
     progress: 0
 }
 
-export default function rootReducer(state = initState, action) {
+function localReducer(state = initState, action) {
     switch (action.type) {
         case "SHOW":
             return {
@@ -26,3 +30,9 @@ export default function rootReducer(state = initState, action) {
         default: return state;
     }
 }
+const rootReducer = combineReducers({
+    localReducer: localReducer,
+    firestore: firestoreReducer,
+    firebase: firebaseReducer
+})
+export default rootReducer;

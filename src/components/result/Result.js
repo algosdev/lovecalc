@@ -5,7 +5,6 @@ import Heart from '../../heart.png'
 import { Reset } from '../../store/Actions'
 function Result(props) {
     const { reduxState, reset } = props;
-    console.log(props)
     const heartEffect = reduxState.progress === 1 ? 'effect' : 'simple';
     const ready = reduxState.progress === 2 ? true : false;
     return (
@@ -36,7 +35,7 @@ function Result(props) {
 
 const mapStateToProps = (state) => {
     return {
-        reduxState: state
+        reduxState: state.localReducer
     }
 }
 const mapDispatchToProps = (dispatch) => {
