@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore, applyMiddleware, compose } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import rootReducer from './store/Reducers'
 import * as firebase from "firebase/app"
 import 'firebase/firestore';
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
-import { createFirestoreInstance, getFirestore, reduxFirestore } from 'redux-firestore'
+import { createFirestoreInstance, getFirestore } from 'redux-firestore'
 const firebaseConfig = {
   apiKey: "AIzaSyCSH4n9Ur6p9VNqmRvD4yg6Ys-Qwd5qnUw",
   authDomain: "lovecalc-6d973.firebaseapp.com",
@@ -28,9 +28,8 @@ const rrfConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.firestore();
 const store = createStore(rootReducer,
-  compose(applyMiddleware(thunk.withExtraArgument({ getFirestore })),
-    reduxFirestore(firebaseConfig)),
-)
+  applyMiddleware(thunk.withExtraArgument({ getFirestore })
+  ))
 const rrfProps = {
   firebase,
   config: rrfConfig,
